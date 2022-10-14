@@ -22,6 +22,11 @@
 		5EC66A5728F955650001B1E3 /* DecoderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A5628F955650001B1E3 /* DecoderService.swift */; };
 		5EC66A5928F959960001B1E3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A5828F959960001B1E3 /* APIService.swift */; };
 		5EC66A5B28F9A8A30001B1E3 /* CategoriesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A5A28F9A8A30001B1E3 /* CategoriesHeaderView.swift */; };
+		5EC66A6128F9AEE80001B1E3 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A6028F9AEE80001B1E3 /* UICollectionViewCell.swift */; };
+		5EC66A6328F9AF6B0001B1E3 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A6228F9AF6B0001B1E3 /* UICollectionView.swift */; };
+		5EC66A6528F9AFAF0001B1E3 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A6428F9AFAF0001B1E3 /* UITableViewCell.swift */; };
+		5EC66A6728F9B0010001B1E3 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A6628F9B0010001B1E3 /* UITableView.swift */; };
+		5EC66A6928F9B0900001B1E3 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A6828F9B0900001B1E3 /* UIView.swift */; };
 		68C11EAC0127487D98394F56 /* Pods_Pizenatto_PizenattoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54959CDDD67E6EE0B6796F /* Pods_Pizenatto_PizenattoUITests.framework */; };
 		85E1053245625BC22F19748E /* Pods_Pizenatto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77923A3D5B310E454246E60E /* Pods_Pizenatto.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +67,11 @@
 		5EC66A5628F955650001B1E3 /* DecoderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderService.swift; sourceTree = "<group>"; };
 		5EC66A5828F959960001B1E3 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		5EC66A5A28F9A8A30001B1E3 /* CategoriesHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesHeaderView.swift; sourceTree = "<group>"; };
+		5EC66A6028F9AEE80001B1E3 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
+		5EC66A6228F9AF6B0001B1E3 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		5EC66A6428F9AFAF0001B1E3 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		5EC66A6628F9B0010001B1E3 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		5EC66A6828F9B0900001B1E3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		65F52EA37666F34F302D4D50 /* Pods-PizenattoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizenattoTests.debug.xcconfig"; path = "Target Support Files/Pods-PizenattoTests/Pods-PizenattoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		77923A3D5B310E454246E60E /* Pods_Pizenatto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pizenatto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6087CC741C41D15CEB289D /* Pods-Pizenatto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizenatto.release.xcconfig"; path = "Target Support Files/Pods-Pizenatto/Pods-Pizenatto.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +187,11 @@
 		5EC66A5C28F9AD050001B1E3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5EC66A6828F9B0900001B1E3 /* UIView.swift */,
+				5EC66A6028F9AEE80001B1E3 /* UICollectionViewCell.swift */,
+				5EC66A6228F9AF6B0001B1E3 /* UICollectionView.swift */,
+				5EC66A6428F9AFAF0001B1E3 /* UITableViewCell.swift */,
+				5EC66A6628F9B0010001B1E3 /* UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -433,14 +448,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EC66A6928F9B0900001B1E3 /* UIView.swift in Sources */,
+				5EC66A6328F9AF6B0001B1E3 /* UICollectionView.swift in Sources */,
 				5EC669E928F93E7F0001B1E3 /* CatalogViewController.swift in Sources */,
 				5EC66A5928F959960001B1E3 /* APIService.swift in Sources */,
 				5EC66A1528F951680001B1E3 /* TabbarController.swift in Sources */,
 				5EC66A5728F955650001B1E3 /* DecoderService.swift in Sources */,
+				5EC66A6728F9B0010001B1E3 /* UITableView.swift in Sources */,
+				5EC66A6528F9AFAF0001B1E3 /* UITableViewCell.swift in Sources */,
 				5EC66A5528F955190001B1E3 /* NetworkService.swift in Sources */,
 				5EC669E528F93E7F0001B1E3 /* AppDelegate.swift in Sources */,
 				5EC669E728F93E7F0001B1E3 /* SceneDelegate.swift in Sources */,
 				5EC66A5B28F9A8A30001B1E3 /* CategoriesHeaderView.swift in Sources */,
+				5EC66A6128F9AEE80001B1E3 /* UICollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
