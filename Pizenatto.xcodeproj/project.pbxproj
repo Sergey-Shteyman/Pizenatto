@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5513E994CD249C0B35C61C59 /* Pods_PizenattoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91239E72E4DC94AC246DFC9 /* Pods_PizenattoTests.framework */; };
 		5EC669E528F93E7F0001B1E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC669E428F93E7F0001B1E3 /* AppDelegate.swift */; };
 		5EC669E728F93E7F0001B1E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC669E628F93E7F0001B1E3 /* SceneDelegate.swift */; };
 		5EC669E928F93E7F0001B1E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC669E828F93E7F0001B1E3 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 		5EC669FC28F93E800001B1E3 /* PizenattoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC669FB28F93E800001B1E3 /* PizenattoTests.swift */; };
 		5EC66A0628F93E800001B1E3 /* PizenattoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A0528F93E800001B1E3 /* PizenattoUITests.swift */; };
 		5EC66A0828F93E800001B1E3 /* PizenattoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A0728F93E800001B1E3 /* PizenattoUITestsLaunchTests.swift */; };
+		68C11EAC0127487D98394F56 /* Pods_Pizenatto_PizenattoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54959CDDD67E6EE0B6796F /* Pods_Pizenatto_PizenattoUITests.framework */; };
+		85E1053245625BC22F19748E /* Pods_Pizenatto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77923A3D5B310E454246E60E /* Pods_Pizenatto.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,15 @@
 		5EC66A0128F93E800001B1E3 /* PizenattoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PizenattoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC66A0528F93E800001B1E3 /* PizenattoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizenattoUITests.swift; sourceTree = "<group>"; };
 		5EC66A0728F93E800001B1E3 /* PizenattoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizenattoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		65F52EA37666F34F302D4D50 /* Pods-PizenattoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizenattoTests.debug.xcconfig"; path = "Target Support Files/Pods-PizenattoTests/Pods-PizenattoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		77923A3D5B310E454246E60E /* Pods_Pizenatto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pizenatto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B6087CC741C41D15CEB289D /* Pods-Pizenatto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizenatto.release.xcconfig"; path = "Target Support Files/Pods-Pizenatto/Pods-Pizenatto.release.xcconfig"; sourceTree = "<group>"; };
+		A82BF405FC425157C674F73C /* Pods-Pizenatto-PizenattoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizenatto-PizenattoUITests.release.xcconfig"; path = "Target Support Files/Pods-Pizenatto-PizenattoUITests/Pods-Pizenatto-PizenattoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ADB6D78B9AA82AA07A86FB0D /* Pods-Pizenatto-PizenattoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizenatto-PizenattoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Pizenatto-PizenattoUITests/Pods-Pizenatto-PizenattoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E91239E72E4DC94AC246DFC9 /* Pods_PizenattoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PizenattoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA54959CDDD67E6EE0B6796F /* Pods_Pizenatto_PizenattoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pizenatto_PizenattoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F79D0CFDD5B35018D8A964D7 /* Pods-PizenattoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizenattoTests.release.xcconfig"; path = "Target Support Files/Pods-PizenattoTests/Pods-PizenattoTests.release.xcconfig"; sourceTree = "<group>"; };
+		F889A62D144C908FCBAB8778 /* Pods-Pizenatto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizenatto.debug.xcconfig"; path = "Target Support Files/Pods-Pizenatto/Pods-Pizenatto.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E1053245625BC22F19748E /* Pods_Pizenatto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5513E994CD249C0B35C61C59 /* Pods_PizenattoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68C11EAC0127487D98394F56 /* Pods_Pizenatto_PizenattoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				5EC669FA28F93E800001B1E3 /* PizenattoTests */,
 				5EC66A0428F93E800001B1E3 /* PizenattoUITests */,
 				5EC669E228F93E7F0001B1E3 /* Products */,
+				95960EEFE5B41BB522357F35 /* Pods */,
+				D978AE2160AC3A23E2C9567C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +144,30 @@
 			path = PizenattoUITests;
 			sourceTree = "<group>";
 		};
+		95960EEFE5B41BB522357F35 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F889A62D144C908FCBAB8778 /* Pods-Pizenatto.debug.xcconfig */,
+				9B6087CC741C41D15CEB289D /* Pods-Pizenatto.release.xcconfig */,
+				ADB6D78B9AA82AA07A86FB0D /* Pods-Pizenatto-PizenattoUITests.debug.xcconfig */,
+				A82BF405FC425157C674F73C /* Pods-Pizenatto-PizenattoUITests.release.xcconfig */,
+				65F52EA37666F34F302D4D50 /* Pods-PizenattoTests.debug.xcconfig */,
+				F79D0CFDD5B35018D8A964D7 /* Pods-PizenattoTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D978AE2160AC3A23E2C9567C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77923A3D5B310E454246E60E /* Pods_Pizenatto.framework */,
+				EA54959CDDD67E6EE0B6796F /* Pods_Pizenatto_PizenattoUITests.framework */,
+				E91239E72E4DC94AC246DFC9 /* Pods_PizenattoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +175,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EC66A0B28F93E800001B1E3 /* Build configuration list for PBXNativeTarget "Pizenatto" */;
 			buildPhases = (
+				352BB9DE774ADCF1AF873153 /* [CP] Check Pods Manifest.lock */,
 				5EC669DD28F93E7F0001B1E3 /* Sources */,
 				5EC669DE28F93E7F0001B1E3 /* Frameworks */,
 				5EC669DF28F93E7F0001B1E3 /* Resources */,
@@ -151,6 +193,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EC66A0E28F93E800001B1E3 /* Build configuration list for PBXNativeTarget "PizenattoTests" */;
 			buildPhases = (
+				35DBC69B2235D35354701238 /* [CP] Check Pods Manifest.lock */,
 				5EC669F328F93E800001B1E3 /* Sources */,
 				5EC669F428F93E800001B1E3 /* Frameworks */,
 				5EC669F528F93E800001B1E3 /* Resources */,
@@ -169,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EC66A1128F93E800001B1E3 /* Build configuration list for PBXNativeTarget "PizenattoUITests" */;
 			buildPhases = (
+				471B93A38805F836F2D8B2C6 /* [CP] Check Pods Manifest.lock */,
 				5EC669FD28F93E800001B1E3 /* Sources */,
 				5EC669FE28F93E800001B1E3 /* Frameworks */,
 				5EC669FF28F93E800001B1E3 /* Resources */,
@@ -252,6 +296,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		352BB9DE774ADCF1AF873153 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pizenatto-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35DBC69B2235D35354701238 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PizenattoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		471B93A38805F836F2D8B2C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pizenatto-PizenattoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5EC669DD28F93E7F0001B1E3 /* Sources */ = {
@@ -432,6 +545,7 @@
 		};
 		5EC66A0C28F93E800001B1E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F889A62D144C908FCBAB8778 /* Pods-Pizenatto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,6 +573,7 @@
 		};
 		5EC66A0D28F93E800001B1E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B6087CC741C41D15CEB289D /* Pods-Pizenatto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -486,6 +601,7 @@
 		};
 		5EC66A0F28F93E800001B1E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65F52EA37666F34F302D4D50 /* Pods-PizenattoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +621,7 @@
 		};
 		5EC66A1028F93E800001B1E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F79D0CFDD5B35018D8A964D7 /* Pods-PizenattoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +641,7 @@
 		};
 		5EC66A1228F93E800001B1E3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADB6D78B9AA82AA07A86FB0D /* Pods-Pizenatto-PizenattoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -541,6 +659,7 @@
 		};
 		5EC66A1328F93E800001B1E3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A82BF405FC425157C674F73C /* Pods-Pizenatto-PizenattoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
