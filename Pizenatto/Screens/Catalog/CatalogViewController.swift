@@ -21,6 +21,7 @@ final class CatalogViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // TODO: - Refactore to Constraints
         view.addSubview(tableView)
         tableView.frame = view.bounds
         
