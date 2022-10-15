@@ -7,13 +7,12 @@
 
 import UIKit
 
-struct ProductCellViewModel {
-    let title: String
-    let categoryId: Int
-
-}
-
 final class ProductTableViewCell: UITableViewCell {
+    
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -24,16 +23,16 @@ final class ProductTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureCell(with viewModel: ProductCellViewModel) {
-        
+    func configureCell(with viewModel: ProductViewModel) {
+        titleLabel.text = viewModel.title
+    }
+    
+    private func setupCell() {
+        // TODO: -
+        contentView.addSubview(titleLabel)
+        titleLabel.frame = contentView.bounds
     }
 }
 
-// MARK: - Private methods
-private extension ProductTableViewCell {
-    
-    func setupCell() {
-        
-    }
-}
+
 

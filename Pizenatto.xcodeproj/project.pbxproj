@@ -30,6 +30,13 @@
 		5EC66A6E28F9BEEB0001B1E3 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A6D28F9BEEB0001B1E3 /* CategoryCollectionViewCell.swift */; };
 		5EC66A7028F9F5A20001B1E3 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A6F28F9F5A20001B1E3 /* ProductTableViewCell.swift */; };
 		5EC66A7228F9F7C90001B1E3 /* CatalogPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A7128F9F7C90001B1E3 /* CatalogPresenter.swift */; };
+		5EC66A7428FA92210001B1E3 /* PromotionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A7328FA92210001B1E3 /* PromotionsTableViewCell.swift */; };
+		5EC66A7628FA923A0001B1E3 /* PromotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A7528FA923A0001B1E3 /* PromotionCollectionViewCell.swift */; };
+		5EC66A7928FA929B0001B1E3 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A7828FA929B0001B1E3 /* Section.swift */; };
+		5EC66A7B28FA92BA0001B1E3 /* PromotionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A7A28FA92BA0001B1E3 /* PromotionModel.swift */; };
+		5EC66A7D28FA92CE0001B1E3 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A7C28FA92CE0001B1E3 /* CategoryModel.swift */; };
+		5EC66A7F28FA92E20001B1E3 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A7E28FA92E20001B1E3 /* ProductModel.swift */; };
+		5EC66A8128FA93760001B1E3 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A8028FA93760001B1E3 /* ModuleBuilder.swift */; };
 		68C11EAC0127487D98394F56 /* Pods_Pizenatto_PizenattoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54959CDDD67E6EE0B6796F /* Pods_Pizenatto_PizenattoUITests.framework */; };
 		85E1053245625BC22F19748E /* Pods_Pizenatto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77923A3D5B310E454246E60E /* Pods_Pizenatto.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +85,13 @@
 		5EC66A6D28F9BEEB0001B1E3 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		5EC66A6F28F9F5A20001B1E3 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		5EC66A7128F9F7C90001B1E3 /* CatalogPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogPresenter.swift; sourceTree = "<group>"; };
+		5EC66A7328FA92210001B1E3 /* PromotionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsTableViewCell.swift; sourceTree = "<group>"; };
+		5EC66A7528FA923A0001B1E3 /* PromotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCollectionViewCell.swift; sourceTree = "<group>"; };
+		5EC66A7828FA929B0001B1E3 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		5EC66A7A28FA92BA0001B1E3 /* PromotionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionModel.swift; sourceTree = "<group>"; };
+		5EC66A7C28FA92CE0001B1E3 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		5EC66A7E28FA92E20001B1E3 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		5EC66A8028FA93760001B1E3 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		65F52EA37666F34F302D4D50 /* Pods-PizenattoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizenattoTests.debug.xcconfig"; path = "Target Support Files/Pods-PizenattoTests/Pods-PizenattoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		77923A3D5B310E454246E60E /* Pods_Pizenatto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pizenatto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6087CC741C41D15CEB289D /* Pods-Pizenatto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizenatto.release.xcconfig"; path = "Target Support Files/Pods-Pizenatto/Pods-Pizenatto.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,8 +156,8 @@
 		5EC669E328F93E7F0001B1E3 /* Pizenatto */ = {
 			isa = PBXGroup;
 			children = (
-				5EC66A5D28F9AD210001B1E3 /* Screens */,
 				5EC66A5228F954F80001B1E3 /* Core */,
+				5EC66A5D28F9AD210001B1E3 /* Screens */,
 				5EC669E428F93E7F0001B1E3 /* AppDelegate.swift */,
 				5EC669E628F93E7F0001B1E3 /* SceneDelegate.swift */,
 				5EC669EA28F93E7F0001B1E3 /* Main.storyboard */,
@@ -174,6 +188,7 @@
 		5EC66A5228F954F80001B1E3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5EC66A7728FA924B0001B1E3 /* Entities */,
 				5EC66A6A28F9BE930001B1E3 /* Models */,
 				5EC66A5C28F9AD050001B1E3 /* Extensions */,
 				5EC66A5328F955010001B1E3 /* ServiceLayer */,
@@ -187,6 +202,7 @@
 				5EC66A5428F955190001B1E3 /* NetworkService.swift */,
 				5EC66A5628F955650001B1E3 /* DecoderService.swift */,
 				5EC66A5828F959960001B1E3 /* APIService.swift */,
+				5EC66A8028FA93760001B1E3 /* ModuleBuilder.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -228,6 +244,8 @@
 				5EC66A5A28F9A8A30001B1E3 /* CategoriesHeaderView.swift */,
 				5EC66A6D28F9BEEB0001B1E3 /* CategoryCollectionViewCell.swift */,
 				5EC66A6F28F9F5A20001B1E3 /* ProductTableViewCell.swift */,
+				5EC66A7328FA92210001B1E3 /* PromotionsTableViewCell.swift */,
+				5EC66A7528FA923A0001B1E3 /* PromotionCollectionViewCell.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -235,8 +253,19 @@
 		5EC66A6A28F9BE930001B1E3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5EC66A7A28FA92BA0001B1E3 /* PromotionModel.swift */,
+				5EC66A7C28FA92CE0001B1E3 /* CategoryModel.swift */,
+				5EC66A7E28FA92E20001B1E3 /* ProductModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5EC66A7728FA924B0001B1E3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5EC66A7828FA929B0001B1E3 /* Section.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		95960EEFE5B41BB522357F35 /* Pods */ = {
@@ -468,18 +497,25 @@
 				5EC66A6928F9B0900001B1E3 /* UIView.swift in Sources */,
 				5EC66A6328F9AF6B0001B1E3 /* UICollectionView.swift in Sources */,
 				5EC66A7028F9F5A20001B1E3 /* ProductTableViewCell.swift in Sources */,
+				5EC66A7428FA92210001B1E3 /* PromotionsTableViewCell.swift in Sources */,
+				5EC66A7D28FA92CE0001B1E3 /* CategoryModel.swift in Sources */,
 				5EC669E928F93E7F0001B1E3 /* CatalogViewController.swift in Sources */,
 				5EC66A7228F9F7C90001B1E3 /* CatalogPresenter.swift in Sources */,
+				5EC66A7F28FA92E20001B1E3 /* ProductModel.swift in Sources */,
+				5EC66A7928FA929B0001B1E3 /* Section.swift in Sources */,
 				5EC66A5928F959960001B1E3 /* APIService.swift in Sources */,
 				5EC66A1528F951680001B1E3 /* TabbarController.swift in Sources */,
 				5EC66A5728F955650001B1E3 /* DecoderService.swift in Sources */,
 				5EC66A6728F9B0010001B1E3 /* UITableView.swift in Sources */,
+				5EC66A7B28FA92BA0001B1E3 /* PromotionModel.swift in Sources */,
+				5EC66A8128FA93760001B1E3 /* ModuleBuilder.swift in Sources */,
 				5EC66A6528F9AFAF0001B1E3 /* UITableViewCell.swift in Sources */,
 				5EC66A5528F955190001B1E3 /* NetworkService.swift in Sources */,
 				5EC669E528F93E7F0001B1E3 /* AppDelegate.swift in Sources */,
 				5EC66A6E28F9BEEB0001B1E3 /* CategoryCollectionViewCell.swift in Sources */,
 				5EC669E728F93E7F0001B1E3 /* SceneDelegate.swift in Sources */,
 				5EC66A5B28F9A8A30001B1E3 /* CategoriesHeaderView.swift in Sources */,
+				5EC66A7628FA923A0001B1E3 /* PromotionCollectionViewCell.swift in Sources */,
 				5EC66A6128F9AEE80001B1E3 /* UICollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

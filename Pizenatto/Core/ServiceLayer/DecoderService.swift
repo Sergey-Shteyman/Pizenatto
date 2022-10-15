@@ -14,11 +14,11 @@ protocol Decoderable {
 }
 
 // MARK: - DecoderService
-final class DecoderService{
+final class DecoderService {
     private let decoder = JSONDecoder()
 }
 
-// MARK: - DecoderService Impl
+// MARK: - Decoderable Impl
 extension DecoderService: Decoderable {
     
     func decode<T: Decodable>(_ data: Data, completion: @escaping (Result<T, Error>) -> Void) {

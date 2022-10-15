@@ -28,7 +28,7 @@ final class CategoriesHeaderView: UITableViewHeaderFooterView {
         return collectionView
     }()
     
-    private var categories: [CategoryCellViewModel] = []
+    private var categories: [CategoryViewModel] = []
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
@@ -39,9 +39,22 @@ final class CategoriesHeaderView: UITableViewHeaderFooterView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureCell(with viewModel: [CategoryCellViewModel]) {
-        categories = viewModel
+    func configure(with viewModel: CategoriesViewModel) {
+        categories = viewModel.categories
         collectionView.reloadData()
+    }
+    
+    private func setupCell() {
+        contentView.backgroundColor = .purple
+        
+        contentView.myAddSubView(collectionView)
+        
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 24),
+            collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -24)
+        ])
     }
 }
 
@@ -69,17 +82,6 @@ extension CategoriesHeaderView: UICollectionViewDataSource {
     }
 }
 
-// MARK: - CategoryCollectionViewCellDelegate Impl
-extension CategoriesHeaderView: CategoryCollectionViewCellDelegate {
-    
-    func categoryCollectionViewCellDidTapButton(_ cell: CategoryCollectionViewCell) {
-        guard let indexPath = collectionView.indexPath(for: cell) else {
-            return
-        }
-        delegate?.categoryHeaderViewDidTapCell(at: indexPath)
-    }
-}
-
 // MARK: - UICollectionViewDelegateFlowLayout Impl
 extension CategoriesHeaderView: UICollectionViewDelegateFlowLayout {
 
@@ -90,18 +92,13 @@ extension CategoriesHeaderView: UICollectionViewDelegateFlowLayout {
     }
 }
 
-private extension CategoriesHeaderView {
-    private func setupCell() {
-        contentView.backgroundColor = .purple
-        
-        contentView.myAddSubView(collectionView)
-        
-        NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 24),
-            collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -24)
-        ])
+extension CategoriesHeaderView: CategoryCollectionViewCellDelegate {
+    
+    func categoryCollectionViewCellDidTapButton(_ cell: CategoryCollectionViewCell) {
+        guard let indexPath = collectionView.indexPath(for: cell) else {
+            return
+        }
+        delegate?.categoryHeaderViewDidTapCell(at: indexPath)
     }
 }
 

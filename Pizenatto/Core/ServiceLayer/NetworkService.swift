@@ -7,9 +7,6 @@
 
 import Foundation
 
-import Foundation
-
-// MARK: - Networkable
 protocol Networkable {
     func request<T: Decodable>(urlString: String, completion: @escaping (Result<T, Error>) -> Void)
 }
@@ -22,7 +19,6 @@ enum NetworkError: Error {
     case unknownError
 }
 
-// MARK: - NetworkService
 final class NetworkService {
     
     private let decoderService: Decoderable
@@ -32,41 +28,41 @@ final class NetworkService {
     }
 }
 
-// MARK: - Networkable impl
 extension NetworkService: Networkable {
     
     func request<T: Decodable>(urlString: String, completion: @escaping (Result<T, Error>) -> Void) {
-        func comletionHandler(result: Result <T, Error>) {
+        func completionHandler(result: Result<T, Error>) {
             DispatchQueue.main.async {
                 completion(result)
             }
         }
+        
         DispatchQueue.global(qos: .utility).async {
             guard let url = URL(string: urlString) else {
-                comletionHandler(result: .failure(NetworkError.urlError))
+                completionHandler(result: .failure(NetworkError.urlError))
                 return
             }
-            let session = URLSession.shared.dataTask(with: url) { data, respose, error in
+            URLSession.shared.dataTask(with: url) { data, respose, error in
                 if let error = error {
-                    comletionHandler(result: .failure(error))
+                    completionHandler(result: .failure(error))
                     return
                 }
                 
                 guard let urlResponse = respose as? HTTPURLResponse else {
-                    comletionHandler(result: .failure(NetworkError.urlResponseError))
+                    completionHandler(result: .failure(NetworkError.urlResponseError))
                     return
                 }
                 
                 switch urlResponse.statusCode {
                 case 200...299:
                     guard let data = data else {
-                        comletionHandler(result: .failure(NetworkError.dataError))
+                        completionHandler(result: .failure(NetworkError.dataError))
                         return
                     }
-
+                    // TODO: - self
                     self.decoderService.decode(data, completion: completion)
                 default:
-                    comletionHandler(result: .failure(NetworkError.authError(statusCode: urlResponse.statusCode)))
+                    completionHandler(result: .failure(NetworkError.authError(statusCode: urlResponse.statusCode)))
                     return
                 }
             }.resume()

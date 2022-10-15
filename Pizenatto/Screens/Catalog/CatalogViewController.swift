@@ -7,106 +7,110 @@
 
 import UIKit
 
-
-// MARK: - CatalogProtocol
+// MARK: - CatalogViewProtocol
 protocol CatalogViewProtocol: AnyObject {
+    func tableViewUpdate(viewModel sections: [Section])
     func tableViewScrollToRow(at indexPath: IndexPath)
 }
 
 // MARK: - CatalogViewController
 final class CatalogViewController: UIViewController {
-    
-    
-    // TODO: - ModuleBuilder
-    var presenter: CatalogPresenterProtocol = CatalogPresenter()
-    
-    private var categoriesViewModel: [CategoryCellViewModel] = [
-        CategoryCellViewModel(title: "Пицца", isSelected: true),
-        CategoryCellViewModel(title: "Комбо", isSelected: false),
-        CategoryCellViewModel(title: "123", isSelected: false),
-        CategoryCellViewModel(title: "4321", isSelected: false),
-    ]
+
+    var presenter: CatalogPresenterProtocol?
     
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.myRegister(PromotionsTableViewCell.self)
+        tableView.myRegister(ProductTableViewCell.self)
         return tableView
     }()
+    
+    private var sections: [Section] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TODO: - Refactore to Constraints
+        // TODO: - переделать на констеитнты
         view.addSubview(tableView)
         tableView.frame = view.bounds
         
         title = "Москва"
+        
+        presenter?.viewDidLoad()
     }
 }
 
 // MARK: - CatalogViewProtocol Impl
 extension CatalogViewController: CatalogViewProtocol {
     
+    func tableViewUpdate(viewModel sections: [Section]) {
+        self.sections = sections
+        tableView.reloadData()
+    }
+    
     func tableViewScrollToRow(at indexPath: IndexPath) {
         tableView.scrollToRow(at: indexPath, at: .top, animated: true)
     }
 }
 
-// MARK: - UITableViewDataSource impl
+// MARK: - UITableViewDataSource Impl
 extension CatalogViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return sections.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 1 {
-            return 20
-        } else {
-            return 3
-        }
+        return sections[section].rows.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        if indexPath.section == 1 {
-            cell.backgroundColor = .green
-        } else {
-            cell.backgroundColor = .red
+        switch sections[indexPath.section].rows[indexPath.row] {
+        case .promotions(let promotionsViewModel):
+            let cell = tableView.myDequeueReusableCell(type: PromotionsTableViewCell.self, indePath: indexPath)
+            cell.configureCell(with: promotionsViewModel)
+            return cell
+        case .product(let productViewModel):
+            let cell = tableView.myDequeueReusableCell(type: ProductTableViewCell.self, indePath: indexPath)
+            cell.configureCell(with: productViewModel)
+            return cell
         }
-        return cell
     }
     
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        if section == 1 {
-//            return "Title"
-//        } else {
-//            return nil
-//        }
-//    }
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if section == 1 {
+        switch sections[section].type {
+        case .promotions:
+            return nil
+            
+        case .products(let categoriesViewModel):
             let header = CategoriesHeaderView()
-            header.configureCell(with: categoriesViewModel)
+            header.configure(with: categoriesViewModel)
             header.delegate = self
             return header
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 1 {
+            return 150
         } else {
-            return nil
+            return 80
         }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 1 {
-            return 80
-        } else {
+        switch sections[section].type {
+        case .promotions:
             return 0
+            
+        case .products:
+            return 80
         }
     }
 }
 
-// MARK: - UITableViewDelegate impl
+// MARK: - UITableViewDelegate
 extension CatalogViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -116,8 +120,7 @@ extension CatalogViewController: UITableViewDelegate {
 
 // MARK: - CategoriesHeaderViewDelegate Impl
 extension CatalogViewController: CategoriesHeaderViewDelegate {
-    
     func categoryHeaderViewDidTapCell(at indexPath: IndexPath) {
-        presenter.didTapCategory(at: indexPath)
+        presenter?.didTapCategory(at: indexPath)
     }
 }
