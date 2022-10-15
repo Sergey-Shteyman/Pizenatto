@@ -8,15 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		5513E994CD249C0B35C61C59 /* Pods_PizenattoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91239E72E4DC94AC246DFC9 /* Pods_PizenattoTests.framework */; };
+		5E14E2DB28FADED4004F5845 /* NetworkMonitorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14E2DA28FADED4004F5845 /* NetworkMonitorService.swift */; };
+		5E14E2DD28FADF43004F5845 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14E2DC28FADF43004F5845 /* UIImageView.swift */; };
+		5E14E2DF28FADFA5004F5845 /* CategoryResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14E2DE28FADFA5004F5845 /* CategoryResponseModel.swift */; };
+		5E14E2E228FAE01A004F5845 /* CityButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14E2E128FAE01A004F5845 /* CityButtonView.swift */; };
+		5E14E2E428FAE0F3004F5845 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14E2E328FAE0F3004F5845 /* EmptyTableViewCell.swift */; };
 		5EC669E528F93E7F0001B1E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC669E428F93E7F0001B1E3 /* AppDelegate.swift */; };
 		5EC669E728F93E7F0001B1E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC669E628F93E7F0001B1E3 /* SceneDelegate.swift */; };
-		5EC669E928F93E7F0001B1E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC669E828F93E7F0001B1E3 /* ViewController.swift */; };
+		5EC669E928F93E7F0001B1E3 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC669E828F93E7F0001B1E3 /* CatalogViewController.swift */; };
 		5EC669EC28F93E7F0001B1E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC669EA28F93E7F0001B1E3 /* Main.storyboard */; };
 		5EC669EE28F93E7F0001B1E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EC669ED28F93E7F0001B1E3 /* Assets.xcassets */; };
 		5EC669F128F93E7F0001B1E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EC669EF28F93E7F0001B1E3 /* LaunchScreen.storyboard */; };
 		5EC669FC28F93E800001B1E3 /* PizenattoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC669FB28F93E800001B1E3 /* PizenattoTests.swift */; };
 		5EC66A0628F93E800001B1E3 /* PizenattoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A0528F93E800001B1E3 /* PizenattoUITests.swift */; };
 		5EC66A0828F93E800001B1E3 /* PizenattoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A0728F93E800001B1E3 /* PizenattoUITestsLaunchTests.swift */; };
+		5EC66A1528F951680001B1E3 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A1428F951680001B1E3 /* TabbarController.swift */; };
+		5EC66A5528F955190001B1E3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A5428F955190001B1E3 /* NetworkService.swift */; };
+		5EC66A5728F955650001B1E3 /* DecoderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A5628F955650001B1E3 /* DecoderService.swift */; };
+		5EC66A5928F959960001B1E3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A5828F959960001B1E3 /* APIService.swift */; };
+		5EC66A5B28F9A8A30001B1E3 /* CategoriesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A5A28F9A8A30001B1E3 /* CategoriesHeaderView.swift */; };
+		5EC66A6128F9AEE80001B1E3 /* UICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A6028F9AEE80001B1E3 /* UICollectionViewCell.swift */; };
+		5EC66A6328F9AF6B0001B1E3 /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A6228F9AF6B0001B1E3 /* UICollectionView.swift */; };
+		5EC66A6528F9AFAF0001B1E3 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A6428F9AFAF0001B1E3 /* UITableViewCell.swift */; };
+		5EC66A6728F9B0010001B1E3 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A6628F9B0010001B1E3 /* UITableView.swift */; };
+		5EC66A6928F9B0900001B1E3 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A6828F9B0900001B1E3 /* UIView.swift */; };
+		5EC66A6E28F9BEEB0001B1E3 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A6D28F9BEEB0001B1E3 /* CategoryCollectionViewCell.swift */; };
+		5EC66A7028F9F5A20001B1E3 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A6F28F9F5A20001B1E3 /* ProductTableViewCell.swift */; };
+		5EC66A7228F9F7C90001B1E3 /* CatalogPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A7128F9F7C90001B1E3 /* CatalogPresenter.swift */; };
+		5EC66A7428FA92210001B1E3 /* PromotionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A7328FA92210001B1E3 /* PromotionsTableViewCell.swift */; };
+		5EC66A7628FA923A0001B1E3 /* PromotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A7528FA923A0001B1E3 /* PromotionCollectionViewCell.swift */; };
+		5EC66A7928FA929B0001B1E3 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A7828FA929B0001B1E3 /* Section.swift */; };
+		5EC66A7B28FA92BA0001B1E3 /* PromotionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A7A28FA92BA0001B1E3 /* PromotionModel.swift */; };
+		5EC66A7D28FA92CE0001B1E3 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A7C28FA92CE0001B1E3 /* CategoryModel.swift */; };
+		5EC66A7F28FA92E20001B1E3 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A7E28FA92E20001B1E3 /* ProductModel.swift */; };
+		5EC66A8128FA93760001B1E3 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC66A8028FA93760001B1E3 /* ModuleBuilder.swift */; };
 		68C11EAC0127487D98394F56 /* Pods_Pizenatto_PizenattoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA54959CDDD67E6EE0B6796F /* Pods_Pizenatto_PizenattoUITests.framework */; };
 		85E1053245625BC22F19748E /* Pods_Pizenatto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77923A3D5B310E454246E60E /* Pods_Pizenatto.framework */; };
 /* End PBXBuildFile section */
@@ -39,10 +64,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E14E2DA28FADED4004F5845 /* NetworkMonitorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorService.swift; sourceTree = "<group>"; };
+		5E14E2DC28FADF43004F5845 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		5E14E2DE28FADFA5004F5845 /* CategoryResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryResponseModel.swift; sourceTree = "<group>"; };
+		5E14E2E128FAE01A004F5845 /* CityButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityButtonView.swift; sourceTree = "<group>"; };
+		5E14E2E328FAE0F3004F5845 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
 		5EC669E128F93E7F0001B1E3 /* Pizenatto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pizenatto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC669E428F93E7F0001B1E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EC669E628F93E7F0001B1E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5EC669E828F93E7F0001B1E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5EC669E828F93E7F0001B1E3 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		5EC669EB28F93E7F0001B1E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EC669ED28F93E7F0001B1E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EC669F028F93E7F0001B1E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +82,26 @@
 		5EC66A0128F93E800001B1E3 /* PizenattoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PizenattoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC66A0528F93E800001B1E3 /* PizenattoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizenattoUITests.swift; sourceTree = "<group>"; };
 		5EC66A0728F93E800001B1E3 /* PizenattoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizenattoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5EC66A1428F951680001B1E3 /* TabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		5EC66A5428F955190001B1E3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5EC66A5628F955650001B1E3 /* DecoderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderService.swift; sourceTree = "<group>"; };
+		5EC66A5828F959960001B1E3 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		5EC66A5A28F9A8A30001B1E3 /* CategoriesHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesHeaderView.swift; sourceTree = "<group>"; };
+		5EC66A6028F9AEE80001B1E3 /* UICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCell.swift; sourceTree = "<group>"; };
+		5EC66A6228F9AF6B0001B1E3 /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
+		5EC66A6428F9AFAF0001B1E3 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		5EC66A6628F9B0010001B1E3 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		5EC66A6828F9B0900001B1E3 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		5EC66A6D28F9BEEB0001B1E3 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		5EC66A6F28F9F5A20001B1E3 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		5EC66A7128F9F7C90001B1E3 /* CatalogPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogPresenter.swift; sourceTree = "<group>"; };
+		5EC66A7328FA92210001B1E3 /* PromotionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionsTableViewCell.swift; sourceTree = "<group>"; };
+		5EC66A7528FA923A0001B1E3 /* PromotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCollectionViewCell.swift; sourceTree = "<group>"; };
+		5EC66A7828FA929B0001B1E3 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		5EC66A7A28FA92BA0001B1E3 /* PromotionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionModel.swift; sourceTree = "<group>"; };
+		5EC66A7C28FA92CE0001B1E3 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		5EC66A7E28FA92E20001B1E3 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		5EC66A8028FA93760001B1E3 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		65F52EA37666F34F302D4D50 /* Pods-PizenattoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PizenattoTests.debug.xcconfig"; path = "Target Support Files/Pods-PizenattoTests/Pods-PizenattoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		77923A3D5B310E454246E60E /* Pods_Pizenatto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pizenatto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6087CC741C41D15CEB289D /* Pods-Pizenatto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pizenatto.release.xcconfig"; path = "Target Support Files/Pods-Pizenatto/Pods-Pizenatto.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +141,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E14E2E028FAE00A004F5845 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5E14E2E128FAE01A004F5845 /* CityButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5EC669D828F93E7F0001B1E3 = {
 			isa = PBXGroup;
 			children = (
@@ -116,9 +174,10 @@
 		5EC669E328F93E7F0001B1E3 /* Pizenatto */ = {
 			isa = PBXGroup;
 			children = (
+				5EC66A5228F954F80001B1E3 /* Core */,
+				5EC66A5D28F9AD210001B1E3 /* Screens */,
 				5EC669E428F93E7F0001B1E3 /* AppDelegate.swift */,
 				5EC669E628F93E7F0001B1E3 /* SceneDelegate.swift */,
-				5EC669E828F93E7F0001B1E3 /* ViewController.swift */,
 				5EC669EA28F93E7F0001B1E3 /* Main.storyboard */,
 				5EC669ED28F93E7F0001B1E3 /* Assets.xcassets */,
 				5EC669EF28F93E7F0001B1E3 /* LaunchScreen.storyboard */,
@@ -144,6 +203,94 @@
 			path = PizenattoUITests;
 			sourceTree = "<group>";
 		};
+		5EC66A5228F954F80001B1E3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5E14E2E028FAE00A004F5845 /* Views */,
+				5EC66A7728FA924B0001B1E3 /* Entities */,
+				5EC66A6A28F9BE930001B1E3 /* Models */,
+				5EC66A5C28F9AD050001B1E3 /* Extensions */,
+				5EC66A5328F955010001B1E3 /* ServiceLayer */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		5EC66A5328F955010001B1E3 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				5EC66A5428F955190001B1E3 /* NetworkService.swift */,
+				5EC66A5628F955650001B1E3 /* DecoderService.swift */,
+				5EC66A5828F959960001B1E3 /* APIService.swift */,
+				5EC66A8028FA93760001B1E3 /* ModuleBuilder.swift */,
+				5E14E2DA28FADED4004F5845 /* NetworkMonitorService.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		5EC66A5C28F9AD050001B1E3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5EC66A6828F9B0900001B1E3 /* UIView.swift */,
+				5EC66A6028F9AEE80001B1E3 /* UICollectionViewCell.swift */,
+				5EC66A6228F9AF6B0001B1E3 /* UICollectionView.swift */,
+				5EC66A6428F9AFAF0001B1E3 /* UITableViewCell.swift */,
+				5EC66A6628F9B0010001B1E3 /* UITableView.swift */,
+				5E14E2DC28FADF43004F5845 /* UIImageView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5EC66A5D28F9AD210001B1E3 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5EC66A1428F951680001B1E3 /* TabbarController.swift */,
+				5EC66A5E28F9AD420001B1E3 /* Catalog */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		5EC66A5E28F9AD420001B1E3 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				5EC669E828F93E7F0001B1E3 /* CatalogViewController.swift */,
+				5EC66A7128F9F7C90001B1E3 /* CatalogPresenter.swift */,
+				5EC66A5F28F9AD700001B1E3 /* Subviews */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		5EC66A5F28F9AD700001B1E3 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				5EC66A5A28F9A8A30001B1E3 /* CategoriesHeaderView.swift */,
+				5EC66A6D28F9BEEB0001B1E3 /* CategoryCollectionViewCell.swift */,
+				5EC66A6F28F9F5A20001B1E3 /* ProductTableViewCell.swift */,
+				5EC66A7328FA92210001B1E3 /* PromotionsTableViewCell.swift */,
+				5EC66A7528FA923A0001B1E3 /* PromotionCollectionViewCell.swift */,
+				5E14E2E328FAE0F3004F5845 /* EmptyTableViewCell.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		5EC66A6A28F9BE930001B1E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5EC66A7A28FA92BA0001B1E3 /* PromotionModel.swift */,
+				5EC66A7C28FA92CE0001B1E3 /* CategoryModel.swift */,
+				5EC66A7E28FA92E20001B1E3 /* ProductModel.swift */,
+				5E14E2DE28FADFA5004F5845 /* CategoryResponseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5EC66A7728FA924B0001B1E3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				5EC66A7828FA929B0001B1E3 /* Section.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		95960EEFE5B41BB522357F35 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,7 +301,6 @@
 				65F52EA37666F34F302D4D50 /* Pods-PizenattoTests.debug.xcconfig */,
 				F79D0CFDD5B35018D8A964D7 /* Pods-PizenattoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -371,9 +517,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EC669E928F93E7F0001B1E3 /* ViewController.swift in Sources */,
+				5EC66A6928F9B0900001B1E3 /* UIView.swift in Sources */,
+				5E14E2DB28FADED4004F5845 /* NetworkMonitorService.swift in Sources */,
+				5EC66A6328F9AF6B0001B1E3 /* UICollectionView.swift in Sources */,
+				5EC66A7028F9F5A20001B1E3 /* ProductTableViewCell.swift in Sources */,
+				5EC66A7428FA92210001B1E3 /* PromotionsTableViewCell.swift in Sources */,
+				5E14E2E428FAE0F3004F5845 /* EmptyTableViewCell.swift in Sources */,
+				5E14E2E228FAE01A004F5845 /* CityButtonView.swift in Sources */,
+				5EC66A7D28FA92CE0001B1E3 /* CategoryModel.swift in Sources */,
+				5E14E2DD28FADF43004F5845 /* UIImageView.swift in Sources */,
+				5EC669E928F93E7F0001B1E3 /* CatalogViewController.swift in Sources */,
+				5EC66A7228F9F7C90001B1E3 /* CatalogPresenter.swift in Sources */,
+				5EC66A7F28FA92E20001B1E3 /* ProductModel.swift in Sources */,
+				5EC66A7928FA929B0001B1E3 /* Section.swift in Sources */,
+				5EC66A5928F959960001B1E3 /* APIService.swift in Sources */,
+				5EC66A1528F951680001B1E3 /* TabbarController.swift in Sources */,
+				5EC66A5728F955650001B1E3 /* DecoderService.swift in Sources */,
+				5E14E2DF28FADFA5004F5845 /* CategoryResponseModel.swift in Sources */,
+				5EC66A6728F9B0010001B1E3 /* UITableView.swift in Sources */,
+				5EC66A7B28FA92BA0001B1E3 /* PromotionModel.swift in Sources */,
+				5EC66A8128FA93760001B1E3 /* ModuleBuilder.swift in Sources */,
+				5EC66A6528F9AFAF0001B1E3 /* UITableViewCell.swift in Sources */,
+				5EC66A5528F955190001B1E3 /* NetworkService.swift in Sources */,
 				5EC669E528F93E7F0001B1E3 /* AppDelegate.swift in Sources */,
+				5EC66A6E28F9BEEB0001B1E3 /* CategoryCollectionViewCell.swift in Sources */,
 				5EC669E728F93E7F0001B1E3 /* SceneDelegate.swift in Sources */,
+				5EC66A5B28F9A8A30001B1E3 /* CategoriesHeaderView.swift in Sources */,
+				5EC66A7628FA923A0001B1E3 /* PromotionCollectionViewCell.swift in Sources */,
+				5EC66A6128F9AEE80001B1E3 /* UICollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
