@@ -18,6 +18,9 @@ final class CategoryCollectionViewCell: UICollectionViewCell {
     private lazy var button: UIButton = {
         let button = UIButton(type: .system)
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.systemPink.cgColor
+        button.layer.cornerRadius = 16
         return button
     }()
     
@@ -50,4 +53,3 @@ final class CategoryCollectionViewCell: UICollectionViewCell {
         delegate?.categoryCollectionViewCellDidTapButton(self)
     }
 }
-

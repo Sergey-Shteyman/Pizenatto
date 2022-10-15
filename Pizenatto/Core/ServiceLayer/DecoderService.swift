@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 // MARK: Decoderable
 protocol Decoderable {
     func decode<T: Decodable>(_ data: Data, completion: @escaping (Result<T, Error>) -> Void)

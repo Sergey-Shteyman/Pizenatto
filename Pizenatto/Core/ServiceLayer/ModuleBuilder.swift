@@ -9,6 +9,7 @@ import Foundation
 
 // MARK: - Buildable
 protocol Buildable {
+    func makeTabbarViewController() -> TabbarController
     func makeCatalogViewController() -> CatalogViewController
 }
 
@@ -28,6 +29,10 @@ final class ModuleBuilder {
 
 // MARK: - Buildable Impl
 extension ModuleBuilder: Buildable {
+    
+    func makeTabbarViewController() -> TabbarController {
+        return TabbarController(moduleBuilder: self)
+    }
 
     func makeCatalogViewController() -> CatalogViewController {
         let viewController = CatalogViewController()

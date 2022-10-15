@@ -22,6 +22,7 @@ enum SectionType {
 enum RowType {
     case promotions(PromotionsViewModel)
     case product(ProductViewModel)
+    case empty
 }
 
 // TODO: -

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5513E994CD249C0B35C61C59 /* Pods_PizenattoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E91239E72E4DC94AC246DFC9 /* Pods_PizenattoTests.framework */; };
+		5E14E2DB28FADED4004F5845 /* NetworkMonitorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14E2DA28FADED4004F5845 /* NetworkMonitorService.swift */; };
+		5E14E2DD28FADF43004F5845 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14E2DC28FADF43004F5845 /* UIImageView.swift */; };
+		5E14E2DF28FADFA5004F5845 /* CategoryResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14E2DE28FADFA5004F5845 /* CategoryResponseModel.swift */; };
+		5E14E2E228FAE01A004F5845 /* CityButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14E2E128FAE01A004F5845 /* CityButtonView.swift */; };
+		5E14E2E428FAE0F3004F5845 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E14E2E328FAE0F3004F5845 /* EmptyTableViewCell.swift */; };
 		5EC669E528F93E7F0001B1E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC669E428F93E7F0001B1E3 /* AppDelegate.swift */; };
 		5EC669E728F93E7F0001B1E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC669E628F93E7F0001B1E3 /* SceneDelegate.swift */; };
 		5EC669E928F93E7F0001B1E3 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC669E828F93E7F0001B1E3 /* CatalogViewController.swift */; };
@@ -59,6 +64,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E14E2DA28FADED4004F5845 /* NetworkMonitorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitorService.swift; sourceTree = "<group>"; };
+		5E14E2DC28FADF43004F5845 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		5E14E2DE28FADFA5004F5845 /* CategoryResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryResponseModel.swift; sourceTree = "<group>"; };
+		5E14E2E128FAE01A004F5845 /* CityButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityButtonView.swift; sourceTree = "<group>"; };
+		5E14E2E328FAE0F3004F5845 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
 		5EC669E128F93E7F0001B1E3 /* Pizenatto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pizenatto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC669E428F93E7F0001B1E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EC669E628F93E7F0001B1E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +141,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E14E2E028FAE00A004F5845 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5E14E2E128FAE01A004F5845 /* CityButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5EC669D828F93E7F0001B1E3 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +206,7 @@
 		5EC66A5228F954F80001B1E3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5E14E2E028FAE00A004F5845 /* Views */,
 				5EC66A7728FA924B0001B1E3 /* Entities */,
 				5EC66A6A28F9BE930001B1E3 /* Models */,
 				5EC66A5C28F9AD050001B1E3 /* Extensions */,
@@ -203,6 +222,7 @@
 				5EC66A5628F955650001B1E3 /* DecoderService.swift */,
 				5EC66A5828F959960001B1E3 /* APIService.swift */,
 				5EC66A8028FA93760001B1E3 /* ModuleBuilder.swift */,
+				5E14E2DA28FADED4004F5845 /* NetworkMonitorService.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -215,6 +235,7 @@
 				5EC66A6228F9AF6B0001B1E3 /* UICollectionView.swift */,
 				5EC66A6428F9AFAF0001B1E3 /* UITableViewCell.swift */,
 				5EC66A6628F9B0010001B1E3 /* UITableView.swift */,
+				5E14E2DC28FADF43004F5845 /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -246,6 +267,7 @@
 				5EC66A6F28F9F5A20001B1E3 /* ProductTableViewCell.swift */,
 				5EC66A7328FA92210001B1E3 /* PromotionsTableViewCell.swift */,
 				5EC66A7528FA923A0001B1E3 /* PromotionCollectionViewCell.swift */,
+				5E14E2E328FAE0F3004F5845 /* EmptyTableViewCell.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -256,6 +278,7 @@
 				5EC66A7A28FA92BA0001B1E3 /* PromotionModel.swift */,
 				5EC66A7C28FA92CE0001B1E3 /* CategoryModel.swift */,
 				5EC66A7E28FA92E20001B1E3 /* ProductModel.swift */,
+				5E14E2DE28FADFA5004F5845 /* CategoryResponseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -495,10 +518,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EC66A6928F9B0900001B1E3 /* UIView.swift in Sources */,
+				5E14E2DB28FADED4004F5845 /* NetworkMonitorService.swift in Sources */,
 				5EC66A6328F9AF6B0001B1E3 /* UICollectionView.swift in Sources */,
 				5EC66A7028F9F5A20001B1E3 /* ProductTableViewCell.swift in Sources */,
 				5EC66A7428FA92210001B1E3 /* PromotionsTableViewCell.swift in Sources */,
+				5E14E2E428FAE0F3004F5845 /* EmptyTableViewCell.swift in Sources */,
+				5E14E2E228FAE01A004F5845 /* CityButtonView.swift in Sources */,
 				5EC66A7D28FA92CE0001B1E3 /* CategoryModel.swift in Sources */,
+				5E14E2DD28FADF43004F5845 /* UIImageView.swift in Sources */,
 				5EC669E928F93E7F0001B1E3 /* CatalogViewController.swift in Sources */,
 				5EC66A7228F9F7C90001B1E3 /* CatalogPresenter.swift in Sources */,
 				5EC66A7F28FA92E20001B1E3 /* ProductModel.swift in Sources */,
@@ -506,6 +533,7 @@
 				5EC66A5928F959960001B1E3 /* APIService.swift in Sources */,
 				5EC66A1528F951680001B1E3 /* TabbarController.swift in Sources */,
 				5EC66A5728F955650001B1E3 /* DecoderService.swift in Sources */,
+				5E14E2DF28FADFA5004F5845 /* CategoryResponseModel.swift in Sources */,
 				5EC66A6728F9B0010001B1E3 /* UITableView.swift in Sources */,
 				5EC66A7B28FA92BA0001B1E3 /* PromotionModel.swift in Sources */,
 				5EC66A8128FA93760001B1E3 /* ModuleBuilder.swift in Sources */,

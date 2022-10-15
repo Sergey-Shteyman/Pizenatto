@@ -19,7 +19,6 @@ final class CatalogPresenter {
     weak var viewController: CatalogViewProtocol?
     
     private let apiService: APIServicable
-    
     private let productsSectionNumber = 1
     private var promotions: [PromotionModel] = []
     private var categories: [CategoryModel] = []
@@ -30,39 +29,53 @@ final class CatalogPresenter {
     }
     
     private func makeSections() {
-        var sections: [Section] = []
+        let sections: [Section] = [
+            makePromotionsSection(),
+            makeProductsSection()
+        ]
         
-        // make Promotions sections
+        viewController?.tableViewUpdate(viewModel: sections)
+    }
+    
+    private func makePromotionsSection() -> Section {
         let mappedPromotions = promotions.map {
             PromotionViewModel(imageUrl: $0.imageUrl)
         }
         let promotionsViewModel = PromotionsViewModel(promotions: mappedPromotions)
         let promotionsSection = Section(type: .promotions, rows: [.promotions(promotionsViewModel)])
         
-        sections.append(promotionsSection)
+        return promotionsSection
+    }
+    
+    private func makeProductsSection() -> Section {
+        let categoriesViewModel = makeCategoriesViewModel()
         
-        // make Promotions sections
-        let mappedCategories = categories.map {
-            // TODO: -
-            CategoryViewModel(title: $0.title, isSelected: false)
-        }
-        let categoriesViewModel = CategoriesViewModel(categories: mappedCategories)
+        var productsRows: [RowType] = [.empty]
         
-        let productsRows = products.map { product -> RowType in
+        let rows = products.map { product -> RowType in
             let productViewModel = ProductViewModel(
                 title: product.title,
                 desciption: product.description,
-                price: "\(product.price) \(product.currency)",
+                price: "от \(product.price) \(product.currency)",
                 imageUrl: product.imageUrl
             )
             return RowType.product(productViewModel)
         }
         
+        productsRows.append(contentsOf: rows)
+        
         let productsSection = Section(type: .products(categoriesViewModel), rows: productsRows)
         
-        sections.append(productsSection)
+        return productsSection
+    }
+    
+    private func makeCategoriesViewModel() -> CategoriesViewModel {
+        let mappedCategories = categories.map {
+            CategoryViewModel(title: $0.title, isSelected: $0.isSelected)
+        }
+        let categoriesViewModel = CategoriesViewModel(categories: mappedCategories)
         
-        viewController?.tableViewUpdate(viewModel: sections)
+        return categoriesViewModel
     }
 }
 
@@ -90,7 +103,13 @@ extension CatalogPresenter: CatalogPresenterProtocol {
             self.apiService.fetchCategories { result in
                 switch result {
                 case .success(let response):
-                    self.categories = response
+                    self.categories = response.enumerated().map({ index, categoryResponse in
+                        CategoryModel(
+                            id: categoryResponse.id,
+                            title: categoryResponse.title,
+                            isSelected: index == 0 ? true : false
+                        )
+                    })
                     
                 case .failure(let error):
                     print(error, error.localizedDescription)
@@ -121,12 +140,17 @@ extension CatalogPresenter: CatalogPresenterProtocol {
     
     func didTapCategory(at indexPath: IndexPath) {
         let categoryId = categories[indexPath.item].id
+        
+        categories.enumerated().forEach {
+            categories[$0].isSelected = $1.id == categoryId
+        }
 
         let firstIndex = products.firstIndex {
             $0.categoryId == categoryId
         } ?? 0
         print(firstIndex)
         let newIndexPath = IndexPath(row: firstIndex, section: productsSectionNumber)
-        viewController?.tableViewScrollToRow(at: newIndexPath)
+        let categoriesViewModel = makeCategoriesViewModel()
+        viewController?.tableViewScrollToRow(at: newIndexPath, categoriesViewModel: categoriesViewModel)
     }
 }

@@ -19,12 +19,14 @@ final class CategoriesHeaderView: UITableViewHeaderFooterView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 8
-        layout.minimumInteritemSpacing = 80
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.myRegister(CategoryCollectionViewCell.self)
         collectionView.backgroundColor = .white
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.backgroundColor = .clear
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        collectionView.showsHorizontalScrollIndicator = false
         return collectionView
     }()
     
@@ -45,7 +47,7 @@ final class CategoriesHeaderView: UITableViewHeaderFooterView {
     }
     
     private func setupCell() {
-        contentView.backgroundColor = .purple
+        contentView.backgroundColor = .clear
         
         contentView.myAddSubView(collectionView)
         

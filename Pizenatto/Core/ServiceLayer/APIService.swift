@@ -6,12 +6,9 @@
 //
 
 
-import Foundation
-
-
 protocol APIServicable {
     func fetchPromotions(completion: @escaping (Result<[PromotionModel], Error>) -> Void)
-    func fetchCategories(completion: @escaping (Result<[CategoryModel], Error>) -> Void)
+    func fetchCategories(completion: @escaping (Result<[CategoryResponseModel], Error>) -> Void)
     func fetchProducts(completion: @escaping (Result<[ProductModel], Error>) -> Void)
 }
 
@@ -27,17 +24,17 @@ final class APIService {
 extension APIService: APIServicable {
     
     func fetchPromotions(completion: @escaping (Result<[PromotionModel], Error>) -> Void) {
-        let urlString = "https://gist.githubusercontent.com/Sergey-Shteyman/2a7aa78ababc886c7a2c7f0a0da6b3ee/raw/0a9a4337806f7c4c007b8d8cf1d296a2730ce0d5/promotion.json"
+        let urlString = "https://gist.githubusercontent.com/Sergey-Shteyman/2a7aa78ababc886c7a2c7f0a0da6b3ee/raw/7122b737d463c75d7f90689c477dc06e5011f1d4/promotion.json"
         networkService.request(urlString: urlString, completion: completion)
     }
     
-    func fetchCategories(completion: @escaping (Result<[CategoryModel], Error>) -> Void) {
-        let urlString = "https://gist.githubusercontent.com/Sergey-Shteyman/2a7aa78ababc886c7a2c7f0a0da6b3ee/raw/0a9a4337806f7c4c007b8d8cf1d296a2730ce0d5/Categories.json"
+    func fetchCategories(completion: @escaping (Result<[CategoryResponseModel], Error>) -> Void) {
+        let urlString = "https://gist.githubusercontent.com/Sergey-Shteyman/2a7aa78ababc886c7a2c7f0a0da6b3ee/raw/7122b737d463c75d7f90689c477dc06e5011f1d4/Categories.json"
         networkService.request(urlString: urlString, completion: completion)
     }
     
     func fetchProducts(completion: @escaping (Result<[ProductModel], Error>) -> Void) {
-        let urlString = "https://gist.githubusercontent.com/Sergey-Shteyman/2a7aa78ababc886c7a2c7f0a0da6b3ee/raw/52f4e9f5807525ee422ff490aa7500b270f45a9e/Products.json"
+        let urlString = "https://gist.githubusercontent.com/Sergey-Shteyman/2a7aa78ababc886c7a2c7f0a0da6b3ee/raw/7122b737d463c75d7f90689c477dc06e5011f1d4/Products.json"
         networkService.request(urlString: urlString, completion: completion)
     }
 }

@@ -7,19 +7,20 @@
 
 import UIKit
 
-
 final class PromotionsTableViewCell: UITableViewCell {
     
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 16
-        layout.minimumInteritemSpacing = 80
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.myRegister(PromotionCollectionViewCell.self)
         collectionView.backgroundColor = .white
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = .clear
         return collectionView
     }()
     
@@ -41,8 +42,16 @@ final class PromotionsTableViewCell: UITableViewCell {
     
     private func setupCell() {
         // TODO: -
-        contentView.addSubview(collectionView)
-        collectionView.frame = contentView.bounds
+        backgroundColor = .clear
+        contentView.backgroundColor = .clear
+        contentView.myAddSubviews(collectionView)
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            collectionView.heightAnchor.constraint(equalToConstant: 112)
+        ])
     }
 }
 

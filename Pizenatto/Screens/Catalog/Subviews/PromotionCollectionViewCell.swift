@@ -12,7 +12,8 @@ final class PromotionCollectionViewCell: UICollectionViewCell {
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .lightGray
+        imageView.contentMode = .scaleAspectFill
+        imageView.backgroundColor = .green
         return imageView
     }()
     
@@ -26,22 +27,14 @@ final class PromotionCollectionViewCell: UICollectionViewCell {
     }
     
     func configureCell(with viewModel: PromotionViewModel) {
-        // TODO: -
-        guard let url = URL(string: viewModel.imageUrl) else {
-            // handle error
-            return
-        }
-        do {
-            let data = try Data(contentsOf: url)
-            imageView.image = UIImage(data: data)
-        } catch {
-            // handle error
-            print("404 image not found")
-        }
+        imageView.loadImage(urlString: viewModel.imageUrl)
     }
     
     private func setupCell() {
         // TODO: - переделать на констеитнты
+        
+        contentView.layer.cornerRadius = 10
+        contentView.clipsToBounds = true
         contentView.addSubview(imageView)
         imageView.frame = contentView.bounds
         
