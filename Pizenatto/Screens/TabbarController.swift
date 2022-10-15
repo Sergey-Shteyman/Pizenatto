@@ -34,14 +34,14 @@ final class TabbarController: UITabBarController {
         let fourthViewController = UIViewController()
         
         catlogViewController.tabBarItem.title = "Меню"
-        secondViewController.tabBarItem.title = "Меню 1"
-        thirdViewController.tabBarItem.title = "Меню 2"
-        fourthViewController.tabBarItem.title = "Меню 3"
+        secondViewController.tabBarItem.title = "Контакты"
+        thirdViewController.tabBarItem.title = "Профиль"
+        fourthViewController.tabBarItem.title = "Корзина"
         
-        catlogViewController.tabBarItem.image = UIImage(named: "vector")
-        secondViewController.tabBarItem.image = UIImage(systemName: "person")
-        thirdViewController.tabBarItem.image = UIImage(systemName: "house")
-        fourthViewController.tabBarItem.image = UIImage(systemName: "heart")
+        catlogViewController.tabBarItem.image = UIImage(named: "menu")
+        secondViewController.tabBarItem.image = UIImage(named: "vector")
+        thirdViewController.tabBarItem.image = UIImage(named: "profile")
+        fourthViewController.tabBarItem.image = UIImage(named: "trash")
         
         viewControllers = [
             catlogViewController,

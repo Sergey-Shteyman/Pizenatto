@@ -47,7 +47,7 @@ final class CatalogViewController: UIViewController {
     }
     
     private func setupViewController() {
-        view.backgroundColor = .gray
+        view.backgroundColor = .systemGray6
         view.myAddSubviews(tableView)
         
         setupConstraints()
@@ -65,7 +65,7 @@ final class CatalogViewController: UIViewController {
     
     private func setupNavBar() {
         let cityButtonView = CityButtonView()
-        cityButtonView.configure(with: "New York")
+        cityButtonView.configure(with: "Москва")
         let barButtonItem = UIBarButtonItem(customView: cityButtonView)
         navigationItem.leftBarButtonItem = barButtonItem
         

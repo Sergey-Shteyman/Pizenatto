@@ -22,6 +22,7 @@ final class ProductTableViewCell: UITableViewCell {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
+        label.font = .boldSystemFont(ofSize: 17)
         label.numberOfLines = 0
         return label
     }()
@@ -29,21 +30,24 @@ final class ProductTableViewCell: UITableViewCell {
     private let descriptionLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.font = .systemFont(ofSize: 13)
+        label.textColor = .systemGray
         return label
     }()
     
     private lazy var priceButton: UIButton = {
         let button = UIButton(type: .system)
+        button.tintColor = .systemPink
         button.layer.cornerRadius = 6
         button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.red.cgColor
+        button.layer.borderColor = UIColor.systemPink.cgColor
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         return button
     }()
     
     private let separatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .systemGray6
         return view
     }()
     

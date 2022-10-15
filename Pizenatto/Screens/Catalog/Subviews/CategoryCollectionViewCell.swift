@@ -21,6 +21,7 @@ final class CategoryCollectionViewCell: UICollectionViewCell {
         button.layer.borderWidth = 1
         button.layer.borderColor = UIColor.systemPink.cgColor
         button.layer.cornerRadius = 16
+        button.tintColor = .systemPink
         return button
     }()
     
@@ -36,7 +37,7 @@ final class CategoryCollectionViewCell: UICollectionViewCell {
     func configureCell(with viewModel: CategoryViewModel) {
         button.setTitle(viewModel.title, for: .normal)
         if viewModel.isSelected {
-            button.backgroundColor = .red
+            button.backgroundColor = UIColor(red: 1.0, green: 0.2, blue: 0.4, alpha: 0.2)
         } else {
             button.backgroundColor = .clear
         }

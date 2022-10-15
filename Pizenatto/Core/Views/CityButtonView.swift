@@ -16,8 +16,9 @@ final class CityButtonView: UIView {
     
     private let iconImageView: UIImageView = {
         let imageView = UIImageView()
-        let image = UIImage(systemName: "bell")?.withTintColor(.black, renderingMode: .alwaysOriginal)
+        let image = UIImage(named: "arrow")
         imageView.image = image
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     

@@ -17,9 +17,13 @@ final class PromotionCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCell()
+    }
+    override func layoutSubviews() {
+        imageView.contentMode = .scaleAspectFill
     }
     
     required init?(coder: NSCoder) {
@@ -39,5 +43,16 @@ final class PromotionCollectionViewCell: UICollectionViewCell {
         imageView.frame = contentView.bounds
         
         contentView.layer.cornerRadius = 12
+//        setupConstraints()
+    }
+    
+    private func setupConstraints() {
+        
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+        ])
     }
 }
