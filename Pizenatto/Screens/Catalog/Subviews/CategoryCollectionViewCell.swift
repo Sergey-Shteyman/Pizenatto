@@ -7,9 +7,15 @@
 
 import UIKit
 
+// MARK: - CategoryCollectionViewCellDelegate
+protocol CategoryCollectionViewCellDelegate: AnyObject {
+    func categoryCollectionViewCellDidTapButton(_ cell: CategoryCollectionViewCell)
+}
 
 // MARK: - CategorieCollectionViewCell
 final class CategoryCollectionViewCell: UICollectionViewCell {
+    
+    weak var delegate: CategoryCollectionViewCellDelegate?
 
     private lazy var button: UIButton = {
         let button = UIButton(type: .system)
@@ -20,6 +26,7 @@ final class CategoryCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCell()
+        
     }
 
     required init?(coder: NSCoder) {
@@ -28,7 +35,7 @@ final class CategoryCollectionViewCell: UICollectionViewCell {
 
     @objc
     private func didTapButton() {
-        print(#function)
+        delegate?.categoryCollectionViewCellDidTapButton(self)
     }
 
     func configureCell(with viewModel: CategoryCellViewModel) {

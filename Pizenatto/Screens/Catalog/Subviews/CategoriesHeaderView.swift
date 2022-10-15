@@ -28,12 +28,7 @@ final class CategoriesHeaderView: UITableViewHeaderFooterView {
         return collectionView
     }()
     
-    private var categories: [CategoryCellViewModel] = [
-            CategoryCellViewModel(title: "Пицца", isSelected: true),
-            CategoryCellViewModel(title: "Комбо", isSelected: false),
-            CategoryCellViewModel(title: "123", isSelected: false),
-            CategoryCellViewModel(title: "4321", isSelected: false)
-        ]
+    private var categories: [CategoryCellViewModel] = []
     
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
@@ -69,8 +64,19 @@ extension CategoriesHeaderView: UICollectionViewDataSource {
         let cell = collectionView.myDequeueReusableCell(type: CategoryCollectionViewCell.self, indePath: indexPath)
         let viewModel = categories[indexPath.item]
         cell.configureCell(with: viewModel)
-//        cell.delegate = self
+        cell.delegate = self
         return cell
+    }
+}
+
+// MARK: - CategoryCollectionViewCellDelegate Impl
+extension CategoriesHeaderView: CategoryCollectionViewCellDelegate {
+    
+    func categoryCollectionViewCellDidTapButton(_ cell: CategoryCollectionViewCell) {
+        guard let indexPath = collectionView.indexPath(for: cell) else {
+            return
+        }
+        delegate?.categoryHeaderViewDidTapCell(at: indexPath)
     }
 }
 
